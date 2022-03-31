@@ -13,6 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        // Добавляем цвет для AppBar
+        appBarTheme: AppBarTheme(
+          // Посмотреть как можно добавить background image
+          backgroundColor: const Color.fromARGB(255, 129, 73, 9),
+        ),
         primarySwatch: Colors.blue,
       ),
       // Подключаем первый экран из auth_widget
