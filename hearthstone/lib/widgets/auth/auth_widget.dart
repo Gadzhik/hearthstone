@@ -1,5 +1,6 @@
 // Для сохранения данных будем использовать StateFull widget
 import 'package:flutter/material.dart';
+import 'package:themoviedb/widgets/main_screen/main_screen_widget.dart';
 
 import '../../Theme/app_button_style.dart';
 
@@ -91,7 +92,9 @@ class __FormWidgetState extends State<_FormWidget> {
     // Валидируем
     if (login == 'admin' && password == 'admin') {
       errorText = null;
-      print('Open app');
+
+      // Извлекаем навигатор из контекста и добавляем навигацию к MainScreenWidget
+      Navigator.of(context).pushReplacementNamed('/main_screen');
     } else {
       errorText = 'Login Error!';
     }
@@ -193,4 +196,4 @@ class __FormWidgetState extends State<_FormWidget> {
   }
 }
 
-// time: 36.00
+// 31 less - 
