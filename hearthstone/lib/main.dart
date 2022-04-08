@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:themoviedb/Theme/app_colors.dart';
 import 'package:themoviedb/widgets/auth/auth_widget.dart';
 import 'package:themoviedb/widgets/main_screen/main_screen_widget.dart';
 
@@ -17,7 +18,14 @@ class MyApp extends StatelessWidget {
         // Добавляем цвет для AppBar
         appBarTheme: AppBarTheme(
           // Посмотреть как можно добавить background image
-          backgroundColor: const Color.fromARGB(255, 129, 73, 9),
+          backgroundColor: AppColors.mainDarkBlue,
+        ),
+        // Применяем тему к bottomNavigationBar
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: AppColors.mainDarkBlue,
+          // Меняем цвета иконок бара
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey,
         ),
         primarySwatch: Colors.blue,
       ),

@@ -78,9 +78,9 @@ class _FormWidget extends StatefulWidget {
 }
 
 class __FormWidgetState extends State<_FormWidget> {
-  // Добавляем контроллеры
-  final _loginTextController = TextEditingController();
-  final _passwordTextController = TextEditingController();
+  // Добавляем контроллеры, текст в полях (text: 'admin') - для заполнения полей логина/пароля в приложении, потом можно удалить
+  final _loginTextController = TextEditingController(text: 'admin');
+  final _passwordTextController = TextEditingController(text: 'admin');
   // Показываем сообщение о валидации на экране
   String? errorText = null;
 
@@ -196,4 +196,4 @@ class __FormWidgetState extends State<_FormWidget> {
   }
 }
 
-// 31 less - 
+// 33 less - continue 
